@@ -55,7 +55,7 @@ describe("loader", function () {
 
         expect(generatedCode).to.equal(
           'import * as _modules0 from "./modules/a.js"; import * as _modules1 from "./modules/b.js"; import * as _modules2 from "./modules/c.js"; ' +
-            'var modules = { "a": { "js": _modules0.default != null ? _modules0.default : _modules0 }, "b": { "js": _modules1.default != null ? _modules1.default : _modules1 }, "c": { "js": _modules2.default != null ? _modules2.default : _modules2 } } ;'
+            'var modules = { "a": { "js": _modules0 }, "b": { "js": _modules1 }, "c": { "js": _modules2 } } ;'
         );
       });
 
@@ -63,7 +63,15 @@ describe("loader", function () {
         var generatedCode = loader.call(context, 'import modules from "./modules/**/*.js";');
         expect(generatedCode).to.equal(
           'import * as _modules0 from "./modules/a.js"; import * as _modules1 from "./modules/b.js"; import * as _modules2 from "./modules/c.js"; import * as _modules3 from "./modules/recursive/r.js"; ' +
-            'var modules = { "a": { "js": _modules0.default != null ? _modules0.default : _modules0 }, "b": { "js": _modules1.default != null ? _modules1.default : _modules1 }, "c": { "js": _modules2.default != null ? _modules2.default : _modules2 }, "recursive": { "r": { "js": _modules3.default != null ? _modules3.default : _modules3 } } } ;'
+            'var modules = { "a": { "js": _modules0 }, "b": { "js": _modules1 }, "c": { "js": _modules2 }, "recursive": { "r": { "js": _modules3 } } } ;'
+        );
+      });
+
+      it("should expand glob import and group files with same base name", function () {
+        var generatedCode = loader.call(context, 'import modules from "./modules/recursive/**/*.*";');
+        expect(generatedCode).to.equal(
+          'import * as _modules0 from "./modules/recursive/r.css"; import * as _modules1 from "./modules/recursive/r.js"; ' +
+            'var modules = { "r": { "css": _modules0, "js": _modules1 } } ;'
         );
       });
     });

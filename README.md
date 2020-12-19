@@ -9,7 +9,8 @@ ES6 import with glob patterns in Parcel 1 compatible style.
 (Forked from https://github.com/fred104/webpack-import-glob-loader)
 
 Expands globbing patterns for ES6 `import` statements. When importing as module, the resulting
-object is available as another object in a hierarchical structure.
+object is available as another object in a hierarchical structure. Please see the [tests](https://github.com/TheGuardianWolf/webpack-parcel-glob-loader/blob/master/test/test.js)
+for more examples of how things work.
 
 During migration for a Parcel build project to the Webpack build system, I encountered an issue
 with glob patterns not being recognised in Webpack natively. I found several loaders that could

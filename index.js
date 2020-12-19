@@ -101,7 +101,8 @@ function buildModuleAssignment(moduleTree, quote, hasNext) {
 
     return assignment;
   } else if (typeof moduleTree === "string") {
-    assignment += moduleTree + " ";
+    assignment += moduleTree;
+    assignment += hasNext ? ", " : " ";
   }
 
   return assignment;
@@ -152,7 +153,7 @@ module.exports = function (source) {
         } else if (match.match(importModules)) {
           var moduleName = "_" + obj + index;
           modules.push({
-            importName: moduleOrDefault(moduleName),
+            importName: moduleName,
             path: path.parse(prefix + file),
           });
           withModules = true;
