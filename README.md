@@ -20,6 +20,8 @@ compatiblity.
 I find the Parcel style glob imports to be superior due to the resulting module object containing
 both file extension and basenames, instead of an array of unidentifiable modules.
 
+This project uses the [pnpm](https://pnpm.js.org/) package manager.
+
 ---
 
 ```js
@@ -51,7 +53,7 @@ import * as module0 from "a-node-module/foo/1.js";
 import * as module1 from "a-node-module/foo/bar/2.js";
 import * as module2 from "a-node-module/foo/bar/3.js";
 
-var modules = [module0, module1, module2];
+var modules = { "1": { "js": module0 }, "bar": { "2": { "js": module1 }, "3": { "js": module2 } } } ;
 ```
 
 ---
