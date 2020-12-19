@@ -1,6 +1,6 @@
 {
   "name": "webpack-parcel-glob-loader",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "ES6 import with glob patterns (Parcel 1 compatible)",
   "license": "MIT",
   "main": "index.js",
@@ -35,6 +35,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/fred104/webpack-import-glob-loader"
+    "url": "git+https://github.com/TheGuardianWolf/webpack-parcel-glob-loader"
   }
 }
