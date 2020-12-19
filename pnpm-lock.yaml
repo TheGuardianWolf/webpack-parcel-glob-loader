@@ -1,0 +1,477 @@
+dependencies:
+  glob: registry.npmjs.org/glob/5.0.15
+devDependencies:
+  chai: registry.npmjs.org/chai/4.2.0
+  mocha: registry.npmjs.org/mocha/5.2.0
+  sinon: registry.npmjs.org/sinon/7.5.0
+lockfileVersion: 5.1
+packages:
+  registry.npmjs.org/@sinonjs/commons/1.8.1:
+    dependencies:
+      type-detect: registry.npmjs.org/type-detect/4.0.8
+    dev: true
+    name: '@sinonjs/commons'
+    resolution:
+      integrity: sha512-892K+kWUUi3cl+LlqEWIDrhvLgdL79tECi8JZUyq6IviKy/DNhuzCRlbHUjxK89f4ypPMMaFnFuR9Ie6DoIMsw==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/@sinonjs/commons/-/commons-1.8.1.tgz'
+    version: 1.8.1
+  registry.npmjs.org/@sinonjs/formatio/3.2.2:
+    dependencies:
+      '@sinonjs/commons': registry.npmjs.org/@sinonjs/commons/1.8.1
+      '@sinonjs/samsam': registry.npmjs.org/@sinonjs/samsam/3.3.3
+    dev: true
+    name: '@sinonjs/formatio'
+    resolution:
+      integrity: sha512-B8SEsgd8gArBLMD6zpRw3juQ2FVSsmdd7qlevyDqzS9WTCtvF55/gAL+h6gue8ZvPYcdiPdvueM/qm//9XzyTQ==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/@sinonjs/formatio/-/formatio-3.2.2.tgz'
+    version: 3.2.2
+  registry.npmjs.org/@sinonjs/samsam/3.3.3:
+    dependencies:
+      '@sinonjs/commons': registry.npmjs.org/@sinonjs/commons/1.8.1
+      array-from: registry.npmjs.org/array-from/2.1.1
+      lodash: registry.npmjs.org/lodash/4.17.20
+    dev: true
+    name: '@sinonjs/samsam'
+    resolution:
+      integrity: sha512-bKCMKZvWIjYD0BLGnNrxVuw4dkWCYsLqFOUWw8VgKF/+5Y+mE7LfHWPIYoDXowH+3a9LsWDMo0uAP8YDosPvHQ==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/@sinonjs/samsam/-/samsam-3.3.3.tgz'
+    version: 3.3.3
+  registry.npmjs.org/@sinonjs/text-encoding/0.7.1:
+    dev: true
+    name: '@sinonjs/text-encoding'
+    resolution:
+      integrity: sha512-+iTbntw2IZPb/anVDbypzfQa+ay64MW0Zo8aJ8gZPWMMK6/OubMVb6lUPMagqjOPnmtauXnFCACVl3O7ogjeqQ==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/@sinonjs/text-encoding/-/text-encoding-0.7.1.tgz'
+    version: 0.7.1
+  registry.npmjs.org/array-from/2.1.1:
+    dev: true
+    name: array-from
+    resolution:
+      integrity: sha1-z+nYwmYoudxa7MYqn12PHzUsEZU=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/array-from/-/array-from-2.1.1.tgz'
+    version: 2.1.1
+  registry.npmjs.org/assertion-error/1.1.0:
+    dev: true
+    name: assertion-error
+    resolution:
+      integrity: sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/assertion-error/-/assertion-error-1.1.0.tgz'
+    version: 1.1.0
+  registry.npmjs.org/balanced-match/1.0.0:
+    name: balanced-match
+    resolution:
+      integrity: sha1-ibTRmasr7kneFk6gK4nORi1xt2c=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/balanced-match/-/balanced-match-1.0.0.tgz'
+    version: 1.0.0
+  registry.npmjs.org/brace-expansion/1.1.11:
+    dependencies:
+      balanced-match: registry.npmjs.org/balanced-match/1.0.0
+      concat-map: registry.npmjs.org/concat-map/0.0.1
+    name: brace-expansion
+    resolution:
+      integrity: sha512-iCuPHDFgrHX7H2vEI/5xpz07zSHB00TpugqhmYtVmMO6518mCuRMoOYFldEBl0g187ufozdaHgWKcYFb61qGiA==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/brace-expansion/-/brace-expansion-1.1.11.tgz'
+    version: 1.1.11
+  registry.npmjs.org/browser-stdout/1.3.1:
+    dev: true
+    name: browser-stdout
+    resolution:
+      integrity: sha512-qhAVI1+Av2X7qelOfAIYwXONood6XlZE/fXaBSmW/T5SzLAmCgzi+eiWE7fUvbHaeNBQH13UftjpXxsfLkMpgw==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/browser-stdout/-/browser-stdout-1.3.1.tgz'
+    version: 1.3.1
+  registry.npmjs.org/chai/4.2.0:
+    dependencies:
+      assertion-error: registry.npmjs.org/assertion-error/1.1.0
+      check-error: registry.npmjs.org/check-error/1.0.2
+      deep-eql: registry.npmjs.org/deep-eql/3.0.1
+      get-func-name: registry.npmjs.org/get-func-name/2.0.0
+      pathval: registry.npmjs.org/pathval/1.1.0
+      type-detect: registry.npmjs.org/type-detect/4.0.8
+    dev: true
+    engines:
+      node: '>=4'
+    name: chai
+    resolution:
+      integrity: sha512-XQU3bhBukrOsQCuwZndwGcCVQHyZi53fQ6Ys1Fym7E4olpIqqZZhhoFJoaKVvV17lWQoXYwgWN2nF5crA8J2jw==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/chai/-/chai-4.2.0.tgz'
+    version: 4.2.0
+  registry.npmjs.org/check-error/1.0.2:
+    dev: true
+    name: check-error
+    resolution:
+      integrity: sha1-V00xLt2Iu13YkS6Sht1sCu1KrII=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/check-error/-/check-error-1.0.2.tgz'
+    version: 1.0.2
+  registry.npmjs.org/commander/2.15.1:
+    dev: true
+    name: commander
+    resolution:
+      integrity: sha512-VlfT9F3V0v+jr4yxPc5gg9s62/fIVWsd2Bk2iD435um1NlGMYdVCq+MjcXnhYq2icNOizHr1kK+5TI6H0Hy0ag==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/commander/-/commander-2.15.1.tgz'
+    version: 2.15.1
+  registry.npmjs.org/concat-map/0.0.1:
+    name: concat-map
+    resolution:
+      integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/concat-map/-/concat-map-0.0.1.tgz'
+    version: 0.0.1
+  registry.npmjs.org/debug/3.1.0:
+    dependencies:
+      ms: registry.npmjs.org/ms/2.0.0
+    dev: true
+    name: debug
+    resolution:
+      integrity: sha512-OX8XqP7/1a9cqkxYw2yXss15f26NKWBpDXQd0/uK/KPqdQhxbPa994hnzjcE2VqQpDslf55723cKPUOGSmMY3g==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/debug/-/debug-3.1.0.tgz'
+    version: 3.1.0
+  registry.npmjs.org/deep-eql/3.0.1:
+    dependencies:
+      type-detect: registry.npmjs.org/type-detect/4.0.8
+    dev: true
+    engines:
+      node: '>=0.12'
+    name: deep-eql
+    resolution:
+      integrity: sha512-+QeIQyN5ZuO+3Uk5DYh6/1eKO0m0YmJFGNmFHGACpf1ClL1nmlV/p4gNgbl2pJGxgXb4faqo6UE+M5ACEMyVcw==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/deep-eql/-/deep-eql-3.0.1.tgz'
+    version: 3.0.1
+  registry.npmjs.org/diff/3.5.0:
+    dev: true
+    engines:
+      node: '>=0.3.1'
+    name: diff
+    resolution:
+      integrity: sha512-A46qtFgd+g7pDZinpnwiRJtxbC1hpgf0uzP3iG89scHk0AUC7A1TGxf5OiiOUv/JMZR8GOt8hL900hV0bOy5xA==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/diff/-/diff-3.5.0.tgz'
+    version: 3.5.0
+  registry.npmjs.org/escape-string-regexp/1.0.5:
+    dev: true
+    engines:
+      node: '>=0.8.0'
+    name: escape-string-regexp
+    resolution:
+      integrity: sha1-G2HAViGQqN/2rjuyzwIAyhMLhtQ=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz'
+    version: 1.0.5
+  registry.npmjs.org/fs.realpath/1.0.0:
+    dev: true
+    name: fs.realpath
+    resolution:
+      integrity: sha1-FQStJSMVjKpA20onh8sBQRmU6k8=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz'
+    version: 1.0.0
+  registry.npmjs.org/get-func-name/2.0.0:
+    dev: true
+    name: get-func-name
+    resolution:
+      integrity: sha1-6td0q+5y4gQJQzoGY2YCPdaIekE=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/get-func-name/-/get-func-name-2.0.0.tgz'
+    version: 2.0.0
+  registry.npmjs.org/glob/5.0.15:
+    dependencies:
+      inflight: registry.npmjs.org/inflight/1.0.6
+      inherits: registry.npmjs.org/inherits/2.0.4
+      minimatch: registry.npmjs.org/minimatch/3.0.4
+      once: registry.npmjs.org/once/1.4.0
+      path-is-absolute: registry.npmjs.org/path-is-absolute/1.0.1
+    dev: false
+    name: glob
+    resolution:
+      integrity: sha1-G8k2ueAvSmA/zCIuz3Yz0wuLk7E=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/glob/-/glob-5.0.15.tgz'
+    version: 5.0.15
+  registry.npmjs.org/glob/7.1.2:
+    dependencies:
+      fs.realpath: registry.npmjs.org/fs.realpath/1.0.0
+      inflight: registry.npmjs.org/inflight/1.0.6
+      inherits: registry.npmjs.org/inherits/2.0.4
+      minimatch: registry.npmjs.org/minimatch/3.0.4
+      once: registry.npmjs.org/once/1.4.0
+      path-is-absolute: registry.npmjs.org/path-is-absolute/1.0.1
+    dev: true
+    name: glob
+    resolution:
+      integrity: sha512-MJTUg1kjuLeQCJ+ccE4Vpa6kKVXkPYJ2mOCQyUuKLcLQsdrMCpBPUi8qVE6+YuaJkozeA9NusTAw3hLr8Xe5EQ==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/glob/-/glob-7.1.2.tgz'
+    version: 7.1.2
+  registry.npmjs.org/growl/1.10.5:
+    dev: true
+    engines:
+      node: '>=4.x'
+    name: growl
+    resolution:
+      integrity: sha512-qBr4OuELkhPenW6goKVXiv47US3clb3/IbuWF9KNKEijAy9oeHxU9IgzjvJhHkUzhaj7rOUD7+YGWqUjLp5oSA==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/growl/-/growl-1.10.5.tgz'
+    version: 1.10.5
+  registry.npmjs.org/has-flag/3.0.0:
+    dev: true
+    engines:
+      node: '>=4'
+    name: has-flag
+    resolution:
+      integrity: sha1-tdRU3CGZriJWmfNGfloH87lVuv0=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/has-flag/-/has-flag-3.0.0.tgz'
+    version: 3.0.0
+  registry.npmjs.org/he/1.1.1:
+    dev: true
+    hasBin: true
+    name: he
+    resolution:
+      integrity: sha1-k0EP0hsAlzUVH4howvJx80J+I/0=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/he/-/he-1.1.1.tgz'
+    version: 1.1.1
+  registry.npmjs.org/inflight/1.0.6:
+    dependencies:
+      once: registry.npmjs.org/once/1.4.0
+      wrappy: registry.npmjs.org/wrappy/1.0.2
+    name: inflight
+    resolution:
+      integrity: sha1-Sb1jMdfQLQwJvJEKEHW6gWW1bfk=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/inflight/-/inflight-1.0.6.tgz'
+    version: 1.0.6
+  registry.npmjs.org/inherits/2.0.4:
+    name: inherits
+    resolution:
+      integrity: sha512-k/vGaX4/Yla3WzyMCvTQOXYeIHvqOKtnqBduzTHpzpQZzAskKMhZ2K+EnBiSM9zGSoIFeMpXKxa4dYeZIQqewQ==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz'
+    version: 2.0.4
+  registry.npmjs.org/isarray/0.0.1:
+    dev: true
+    name: isarray
+    resolution:
+      integrity: sha1-ihis/Kmo9Bd+Cav8YDiTmwXR7t8=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/isarray/-/isarray-0.0.1.tgz'
+    version: 0.0.1
+  registry.npmjs.org/just-extend/4.1.1:
+    dev: true
+    name: just-extend
+    resolution:
+      integrity: sha512-aWgeGFW67BP3e5181Ep1Fv2v8z//iBJfrvyTnq8wG86vEESwmonn1zPBJ0VfmT9CJq2FIT0VsETtrNFm2a+SHA==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/just-extend/-/just-extend-4.1.1.tgz'
+    version: 4.1.1
+  registry.npmjs.org/lodash/4.17.20:
+    dev: true
+    name: lodash
+    resolution:
+      integrity: sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/lodash/-/lodash-4.17.20.tgz'
+    version: 4.17.20
+  registry.npmjs.org/lolex/4.2.0:
+    dev: true
+    name: lolex
+    resolution:
+      integrity: sha512-gKO5uExCXvSm6zbF562EvM+rd1kQDnB9AZBbiQVzf1ZmdDpxUSvpnAaVOP83N/31mRK8Ml8/VE8DMvsAZQ+7wg==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/lolex/-/lolex-4.2.0.tgz'
+    version: 4.2.0
+  registry.npmjs.org/lolex/5.1.2:
+    dependencies:
+      '@sinonjs/commons': registry.npmjs.org/@sinonjs/commons/1.8.1
+    dev: true
+    name: lolex
+    resolution:
+      integrity: sha512-h4hmjAvHTmd+25JSwrtTIuwbKdwg5NzZVRMLn9saij4SZaepCrTCxPr35H/3bjwfMJtN+t3CX8672UIkglz28A==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/lolex/-/lolex-5.1.2.tgz'
+    version: 5.1.2
+  registry.npmjs.org/minimatch/3.0.4:
+    dependencies:
+      brace-expansion: registry.npmjs.org/brace-expansion/1.1.11
+    name: minimatch
+    resolution:
+      integrity: sha512-yJHVQEhyqPLUTgt9B83PXu6W3rx4MvvHvSUvToogpwoGDOUQ+yDrR0HRot+yOCdCO7u4hX3pWft6kWBBcqh0UA==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/minimatch/-/minimatch-3.0.4.tgz'
+    version: 3.0.4
+  registry.npmjs.org/minimist/0.0.8:
+    dev: true
+    name: minimist
+    resolution:
+      integrity: sha1-hX/Kv8M5fSYluCKCYuhqp6ARsF0=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz'
+    version: 0.0.8
+  registry.npmjs.org/mkdirp/0.5.1:
+    dependencies:
+      minimist: registry.npmjs.org/minimist/0.0.8
+    deprecated: Legacy versions of mkdirp are no longer supported. Please update to mkdirp 1.x. (Note that the API surface has changed to use Promises in 1.x.)
+    dev: true
+    hasBin: true
+    name: mkdirp
+    resolution:
+      integrity: sha1-MAV0OOrGz3+MR2fzhkjWaX11yQM=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.5.1.tgz'
+    version: 0.5.1
+  registry.npmjs.org/mocha/5.2.0:
+    dependencies:
+      browser-stdout: registry.npmjs.org/browser-stdout/1.3.1
+      commander: registry.npmjs.org/commander/2.15.1
+      debug: registry.npmjs.org/debug/3.1.0
+      diff: registry.npmjs.org/diff/3.5.0
+      escape-string-regexp: registry.npmjs.org/escape-string-regexp/1.0.5
+      glob: registry.npmjs.org/glob/7.1.2
+      growl: registry.npmjs.org/growl/1.10.5
+      he: registry.npmjs.org/he/1.1.1
+      minimatch: registry.npmjs.org/minimatch/3.0.4
+      mkdirp: registry.npmjs.org/mkdirp/0.5.1
+      supports-color: registry.npmjs.org/supports-color/5.4.0
+    dev: true
+    engines:
+      node: '>= 4.0.0'
+    hasBin: true
+    name: mocha
+    resolution:
+      integrity: sha512-2IUgKDhc3J7Uug+FxMXuqIyYzH7gJjXECKe/w43IGgQHTSj3InJi+yAA7T24L9bQMRKiUEHxEX37G5JpVUGLcQ==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/mocha/-/mocha-5.2.0.tgz'
+    version: 5.2.0
+  registry.npmjs.org/ms/2.0.0:
+    dev: true
+    name: ms
+    resolution:
+      integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/ms/-/ms-2.0.0.tgz'
+    version: 2.0.0
+  registry.npmjs.org/nise/1.5.3:
+    dependencies:
+      '@sinonjs/formatio': registry.npmjs.org/@sinonjs/formatio/3.2.2
+      '@sinonjs/text-encoding': registry.npmjs.org/@sinonjs/text-encoding/0.7.1
+      just-extend: registry.npmjs.org/just-extend/4.1.1
+      lolex: registry.npmjs.org/lolex/5.1.2
+      path-to-regexp: registry.npmjs.org/path-to-regexp/1.8.0
+    dev: true
+    name: nise
+    resolution:
+      integrity: sha512-Ymbac/94xeIrMf59REBPOv0thr+CJVFMhrlAkW/gjCIE58BGQdCj0x7KRCb3yz+Ga2Rz3E9XXSvUyyxqqhjQAQ==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/nise/-/nise-1.5.3.tgz'
+    version: 1.5.3
+  registry.npmjs.org/once/1.4.0:
+    dependencies:
+      wrappy: registry.npmjs.org/wrappy/1.0.2
+    name: once
+    resolution:
+      integrity: sha1-WDsap3WWHUsROsF9nFC6753Xa9E=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/once/-/once-1.4.0.tgz'
+    version: 1.4.0
+  registry.npmjs.org/path-is-absolute/1.0.1:
+    engines:
+      node: '>=0.10.0'
+    name: path-is-absolute
+    resolution:
+      integrity: sha1-F0uSaHNVNP+8es5r9TpanhtcX18=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/path-is-absolute/-/path-is-absolute-1.0.1.tgz'
+    version: 1.0.1
+  registry.npmjs.org/path-to-regexp/1.8.0:
+    dependencies:
+      isarray: registry.npmjs.org/isarray/0.0.1
+    dev: true
+    name: path-to-regexp
+    resolution:
+      integrity: sha512-n43JRhlUKUAlibEJhPeir1ncUID16QnEjNpwzNdO3Lm4ywrBpBZ5oLD0I6br9evr1Y9JTqwRtAh7JLoOzAQdVA==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/path-to-regexp/-/path-to-regexp-1.8.0.tgz'
+    version: 1.8.0
+  registry.npmjs.org/pathval/1.1.0:
+    dev: true
+    name: pathval
+    resolution:
+      integrity: sha1-uULm1L3mUwBe9rcTYd74cn0GReA=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/pathval/-/pathval-1.1.0.tgz'
+    version: 1.1.0
+  registry.npmjs.org/sinon/7.5.0:
+    dependencies:
+      '@sinonjs/commons': registry.npmjs.org/@sinonjs/commons/1.8.1
+      '@sinonjs/formatio': registry.npmjs.org/@sinonjs/formatio/3.2.2
+      '@sinonjs/samsam': registry.npmjs.org/@sinonjs/samsam/3.3.3
+      diff: registry.npmjs.org/diff/3.5.0
+      lolex: registry.npmjs.org/lolex/4.2.0
+      nise: registry.npmjs.org/nise/1.5.3
+      supports-color: registry.npmjs.org/supports-color/5.5.0
+    dev: true
+    name: sinon
+    resolution:
+      integrity: sha512-AoD0oJWerp0/rY9czP/D6hDTTUYGpObhZjMpd7Cl/A6+j0xBE+ayL/ldfggkBXUs0IkvIiM1ljM8+WkOc5k78Q==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/sinon/-/sinon-7.5.0.tgz'
+    version: 7.5.0
+  registry.npmjs.org/supports-color/5.4.0:
+    dependencies:
+      has-flag: registry.npmjs.org/has-flag/3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: supports-color
+    resolution:
+      integrity: sha512-zjaXglF5nnWpsq470jSv6P9DwPvgLkuapYmfDm3JWOm0vkNTVF2tI4UrN2r6jH1qM/uc/WtxYY1hYoA2dOKj5w==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/supports-color/-/supports-color-5.4.0.tgz'
+    version: 5.4.0
+  registry.npmjs.org/supports-color/5.5.0:
+    dependencies:
+      has-flag: registry.npmjs.org/has-flag/3.0.0
+    dev: true
+    engines:
+      node: '>=4'
+    name: supports-color
+    resolution:
+      integrity: sha512-QjVjwdXIt408MIiAqCX4oUKsgU2EqAGzs2Ppkm4aQYbjm+ZEWEcW4SfFNTr4uMNZma0ey4f5lgLrkB0aX0QMow==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/supports-color/-/supports-color-5.5.0.tgz'
+    version: 5.5.0
+  registry.npmjs.org/type-detect/4.0.8:
+    dev: true
+    engines:
+      node: '>=4'
+    name: type-detect
+    resolution:
+      integrity: sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/type-detect/-/type-detect-4.0.8.tgz'
+    version: 4.0.8
+  registry.npmjs.org/wrappy/1.0.2:
+    name: wrappy
+    resolution:
+      integrity: sha1-tSQ9jz7BqjXxNkYFvA0QNuMKtp8=
+      registry: 'https://git.endgame.nz/api/v4/packages/npm/'
+      tarball: 'https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz'
+    version: 1.0.2
+specifiers:
+  chai: ^4.2.0
+  glob: ^5.0.15
+  mocha: ^5.2.0
+  sinon: ^7.2.0

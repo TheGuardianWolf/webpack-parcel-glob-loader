@@ -1,10 +1,40 @@
 var glob = require("glob");
 var path = require("path");
-var fs = require('fs');
+var fs = require("fs");
+
+function get(obj, objPath, defaults) {
+  try {
+    var val = objPath.reduce(function (obj, path) {
+      if (obj[path] != null) {
+        return obj[path];
+      } else {
+        throw "Empty";
+      }
+    }, obj);
+    return val;
+  } catch (e) {
+    if (e === "Empty") {
+      return defaults;
+    }
+    throw e;
+  }
+}
+
+function set(obj, objPath, value) {
+  objPath.reduce(function (obj, path, index) {
+    if (index === objPath.length - 1) {
+      obj[path] = value;
+    } else if (obj[path] == null) {
+      obj[path] = {};
+    }
+
+    return obj[path];
+  }, obj);
+}
 
 function walkUpToFindNodeModulesPath(context) {
-  var tempPath = path.resolve(context, 'node_modules');
-  var upDirPath = path.resolve(context, '../');
+  var tempPath = path.resolve(context, "node_modules");
+  var upDirPath = path.resolve(context, "../");
 
   if (fs.existsSync(tempPath) && fs.lstatSync(tempPath).isDirectory()) {
     return tempPath;
@@ -19,7 +49,65 @@ function isNodeModule(str) {
   return !str.match(/^\./);
 }
 
-module.exports = function(source) {
+function moduleOrDefault(moduleName) {
+  return moduleName + ".default != null ? " + moduleName + ".default : " + moduleName;
+}
+
+function buildModuleTree(modules) {
+  var dirs = modules.map(function (m) {
+    return m.path.dir.split(path.sep);
+  });
+  var minDirLevel = Math.min.apply(
+    null,
+    dirs.map(function (d) {
+      return d.length;
+    })
+  );
+
+  return modules.reduce(function (tree, m, i) {
+    var basename = m.path.name;
+    var ext = m.path.ext;
+
+    if (basename && basename.length > 0 && ext && ext.length > 0) {
+      var dir = dirs[i].slice(minDirLevel);
+      dir.push(basename);
+
+      var treeLevel = get(tree, dir);
+
+      if (treeLevel == null) {
+        set(tree, dir, { [ext.substr(1)]: m.importName });
+      } else {
+        treeLevel[ext.substr(1)] = m.importName;
+      }
+    }
+
+    return tree;
+  }, {});
+}
+
+function buildModuleAssignment(moduleTree, quote, hasNext) {
+  var assignment = "";
+
+  if (typeof moduleTree === "object") {
+    assignment += "{ ";
+    Object.entries(moduleTree).forEach(function (entry, index, list) {
+      var key = entry[0];
+      var value = entry[1];
+
+      assignment += quote + key + quote + ": " + buildModuleAssignment(value, quote, index < list.length - 1);
+    });
+
+    assignment += hasNext ? "}, " : "} ";
+
+    return assignment;
+  } else if (typeof moduleTree === "string") {
+    assignment += moduleTree + " ";
+  }
+
+  return assignment;
+}
+
+module.exports = function (source) {
   this.cacheable && this.cacheable(true);
 
   var self = this;
@@ -38,7 +126,7 @@ module.exports = function(source) {
     if (!filename.match(/\*/)) return match;
 
     var globRelativePath = filename.match(/!?([^!]*)$/)[1];
-    var prefix = filename.replace(globRelativePath, '');
+    var prefix = filename.replace(globRelativePath, "");
     var cwdPath;
 
     if (isNodeModule(globRelativePath)) {
@@ -54,31 +142,32 @@ module.exports = function(source) {
 
     var result = glob
       .sync(globRelativePath, {
-        cwd: cwdPath
+        cwd: cwdPath,
       })
       .map((file, index) => {
         var fileName = quote + prefix + file + quote;
 
         if (match.match(importSass)) {
-          return '@import ' + fileName;
-
+          return "@import " + fileName;
         } else if (match.match(importModules)) {
-          var moduleName = obj + index;
-          modules.push(moduleName);
+          var moduleName = "_" + obj + index;
+          modules.push({
+            importName: moduleOrDefault(moduleName),
+            path: path.parse(prefix + file),
+          });
           withModules = true;
-          return 'import * as ' + moduleName + ' from ' + fileName;
-
+          return "import * as " + moduleName + " from " + fileName;
         } else if (match.match(importFiles)) {
-          return 'import ' + fileName;
-
+          return "import " + fileName;
         } else {
           self.emitWarning('Unknown import: "' + match + '"');
         }
       })
-      .join('; ');
+      .join("; ");
 
     if (result && withModules) {
-      result += '; var ' + obj + ' = [' + modules.join(', ') + ']';
+      var moduleTree = buildModuleTree(modules);
+      result += "; var " + obj + " = " + buildModuleAssignment(moduleTree, quote);
     }
 
     if (!result) {

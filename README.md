@@ -1,55 +1,84 @@
-[![Build Status](https://travis-ci.org/fred104/webpack-import-glob-loader.svg)](https://travis-ci.org/fred104/webpack-import-glob-loader.svg)
-[![npm version](https://badge.fury.io/js/webpack-import-glob-loader.svg)](https://badge.fury.io/js/webpack-import-glob-loader)
-# webpack-import-glob-loader
-ES6 import with glob patterns (preloader for Webpack)
+[![npm version](https://badge.fury.io/js/webpack-parcel-glob-loader.svg)](https://badge.fury.io/js/webpack-parcel-glob-loader)
 
-(Forked from https://github.com/terpiljenya/import-glob)
+# webpack-parcel-glob-loader
 
-Expands globbing patterns for ES6 `import` statements.
+**NOTE:** This package is _NOT_ for Parcel, it is a compatiblity loader for Webpack.
+
+ES6 import with glob patterns in Parcel 1 compatible style.
+
+(Forked from https://github.com/fred104/webpack-import-glob-loader)
+
+Expands globbing patterns for ES6 `import` statements. When importing as module, the resulting
+object is available as another object in a hierarchical structure.
+
+During migration for a Parcel build project to the Webpack build system, I encountered an issue
+with glob patterns not being recognised in Webpack natively. I found several loaders that could
+transform the glob import into an array structure, but the code was built with the Parcel glob
+import in mind. Thus I created my own loader to import in this style so that I can maintain build
+compatiblity.
+
+I find the Parcel style glob imports to be superior due to the resulting module object containing
+both file extension and basenames, instead of an array of unidentifiable modules.
 
 ---
+
 ```js
 import modules from "./foo/**/*.js";
 ```
+
 Expands into
+
 ```js
 import * as module0 from "./foo/1.js";
 import * as module1 from "./foo/bar/2.js";
 import * as module2 from "./foo/bar/3.js";
 
-var modules = [module0, module1, module2]
+var modules = [module0, module1, module2];
 ```
+
 ---
+
 For importing from node module
+
 ```js
-import modules from "a-node-module/**/*js";
+import modules from "a-node-module/**/*.js";
 ```
+
 Expands into
+
 ```js
 import * as module0 from "a-node-module/foo/1.js";
 import * as module1 from "a-node-module/foo/bar/2.js";
 import * as module2 from "a-node-module/foo/bar/3.js";
 
-var modules = [module0, module1, module2]
+var modules = [module0, module1, module2];
 ```
+
 ---
-__For side effects:__
+
+**For side effects:**
 
 ```js
 import "./foo/**/*.scss";
 ```
+
 Expands into
+
 ```js
 import "./foo/1.scss";
 import "./foo/bar/2.scss";
 ```
+
 ---
-__For sass:__
+
+**For sass:**
 
 ```scss
 @import "./foo/**/*.scss";
 ```
+
 Expands into
+
 ```scss
 @import "./foo/1.scss";
 @import "./foo/bar/2.scss";
@@ -58,11 +87,13 @@ Expands into
 ---
 
 ## Install
+
 ```sh
-npm install webpack-import-glob-loader --save-dev
+npm install webpack-parcel-glob-loader --save-dev
 ```
 
 ## Usage
+
 You can use it one of two ways, the recommended way is to use it as a preloader
 
 ```js
@@ -74,11 +105,11 @@ module.exports = {
     rules: [
       {
           test: /\.js$/,
-          use: 'webpack-import-glob-loader'
+          use: 'webpack-parcel-glob-loader'
       },
       {
           test: /\.scss$/,
-          use: 'webpack-import-glob-loader'
+          use: 'webpack-parcel-glob-loader'
       },
     ]
   }
@@ -86,10 +117,11 @@ module.exports = {
 ```
 
 Alternatively you can use it as a chained loader
+
 ```js
 // foo/bar.js
 import "./**/*.js";
 
 // index.js
-import 'webpack-import-glob-loader!foo/bar.js';
+import "webpack-parcel-glob-loader!foo/bar.js";
 ```

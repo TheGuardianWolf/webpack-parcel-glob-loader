@@ -1,13 +1,17 @@
 {
   "name": "webpack-import-glob-loader",
   "version": "1.6.3",
-  "description": "ES6 import with glob patterns (preloader for Webpack)",
+  "description": "ES6 import with glob patterns (Parcel 1 compatible)",
   "license": "MIT",
   "main": "index.js",
   "author": {
-    "name": "Fred Jhang",
-    "url": "https://github.com/fred104"
+    "name": "TheGuardianWolf",
+    "url": "https://github.com/TheGuardianWolf"
   },
+  "contributors": [
+    "Fred Jhang",
+    "Terpil Jenya"
+  ],
   "keywords": [
     "webpack",
     "loader",
@@ -18,16 +22,12 @@
     "glob": "^5.0.15"
   },
   "devDependencies": {
-    "babel-core": "^6.0.0",
-    "babel-loader": "6.1.0",
-    "babel-preset-es2015": "^6.3.13",
     "chai": "^4.2.0",
     "mocha": "^5.2.0",
-    "sinon": "^7.2.0",
-    "webpack": "^1.0.0"
+    "sinon": "^7.2.0"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "node node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
