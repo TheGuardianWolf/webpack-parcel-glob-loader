@@ -74,6 +74,16 @@ describe("loader", function () {
             'var modules = { "r": { "css": _modules0, "js": _modules1 } } ;'
         );
       });
+
+      it("should import defaults when expanding globs in non esModule mode", function () {
+        context.query = { esModule: false };
+        var generatedCode = loader.call(context, 'import modules from "./modules/*.js";');
+
+        expect(generatedCode).to.equal(
+          'import * as _modules0 from "./modules/a.js"; import * as _modules1 from "./modules/b.js"; import * as _modules2 from "./modules/c.js"; ' +
+            'var modules = { "a": { "js": _modules0.default != null ? _modules0.default : _modules0 }, "b": { "js": _modules1.default != null ? _modules1.default : _modules1 }, "c": { "js": _modules2.default != null ? _modules2.default : _modules2 } } ;'
+        );
+      });
     });
 
     describe("import from *.scss", function () {

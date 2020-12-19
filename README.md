@@ -23,6 +23,17 @@ both file extension and basenames, instead of an array of unidentifiable modules
 
 This project uses the [pnpm](https://pnpm.js.org/) package manager.
 
+## Options
+
+This loader supports the following options (defaults shown):
+
+```js
+{
+  esModule: true  // Exports the default value if false and import is an esModule (default property exists)
+}
+```
+
+
 ---
 
 ```js

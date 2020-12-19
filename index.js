@@ -1,6 +1,17 @@
 var glob = require("glob");
 var path = require("path");
 var fs = require("fs");
+var getOptions = require("loader-utils").getOptions;
+var validate = require("schema-utils").validate;
+
+var schema = {
+  type: "object",
+  properties: {
+    esModule: {
+      type: "boolean",
+    },
+  },
+};
 
 function get(obj, objPath, defaults) {
   try {
@@ -112,6 +123,15 @@ module.exports = function (source) {
   this.cacheable && this.cacheable(true);
 
   var self = this;
+  var options = getOptions(this);
+
+  if (options) {
+    validate(schema, options, {
+      name: "webpack-parcel-glob-loader",
+      baseDataPath: "options",
+    });
+  }
+  var esModule = options.esModule != null ? options.esModule : true;
   var regex = /@?import + ?((\w+) +from )?([\'\"])(.*?);?\3/gm;
   var importModules = /import +(\w+) +from +([\'\"])(.*?)\2/gm;
   var importFiles = /import +([\'\"])(.*?)\1/gm;
@@ -153,7 +173,7 @@ module.exports = function (source) {
         } else if (match.match(importModules)) {
           var moduleName = "_" + obj + index;
           modules.push({
-            importName: moduleName,
+            importName: esModule ? moduleName : moduleOrDefault(moduleName),
             path: path.parse(prefix + file),
           });
           withModules = true;
