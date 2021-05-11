@@ -66,7 +66,7 @@ function moduleOrDefault(moduleName) {
 
 function buildModuleTree(modules) {
   var dirs = modules.map(function (m) {
-    return m.path.dir.split(path.sep);
+    return m.path.dir.split("/");
   });
   var minDirLevel = Math.min.apply(
     null,
